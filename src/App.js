@@ -5,20 +5,19 @@ import Header from './common/Header';
 import Home from "./pages/home";
 import Detail from "./pages/detail";
 import store from './store';
+import './statics/css/global.css';
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Header />
-        <div>
-          <BrowserRouter>
-            <div>
-              <Route path="/" exact component={Home}></Route>
-              <Route path="/detail" exact component={Detail}></Route>
-            </div>
-          </BrowserRouter>
-        </div>
+        <BrowserRouter>
+          <div>
+            <Header />
+            <Route path="/" exact component={Home}></Route>
+            <Route path="/detail" exact component={Detail}></Route>
+          </div>
+        </BrowserRouter>
       </Provider>
     );
   }

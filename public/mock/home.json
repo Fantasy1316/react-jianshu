@@ -1,0 +1,91 @@
+{
+  "err_code": 0,
+  "data": {
+    "topicList": [
+      {
+        "id": 1,
+        "title": "旅行·在路上",
+        "imgUrl": "//upload.jianshu.io/collections/images/13/%E5%95%8A.png?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+      },
+      {
+        "id": 2,
+        "title": "读书",
+        "imgUrl": "//upload.jianshu.io/collections/images/4/sy_20091020135145113016.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+      },
+      {
+        "id": 3,
+        "title": "摄影",
+        "imgUrl": "//upload.jianshu.io/collections/images/83/1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+      },
+      {
+        "id": 4,
+        "title": "@IT·互联网",
+        "imgUrl": "//upload.jianshu.io/collections/images/14/6249340_194140034135_2.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+      },
+      {
+        "id": 5,
+        "title": "手绘",
+        "imgUrl": "//upload.jianshu.io/collections/images/283250/%E6%BC%AB%E7%94%BB%E4%B8%93%E9%A2%98.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
+      },
+      {
+        "id": 6,
+        "imgUrl": "//upload.jianshu.io/collections/images/76/12.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64",
+        "title": "自然科普"
+      }
+    ],
+    "recommendList": [
+      {
+        "id": 1,
+        "title": "简书会员",
+        "color": "#f8b84f"
+      },
+      {
+        "id": 2,
+        "title": "优选连载",
+        "color": "#f4e0bd"
+      },
+      {
+        "id": 3,
+        "title": "简书版权",
+        "color": "#c1e4de"
+      },
+      {
+        "id": 4,
+        "title": "简书大学堂",
+        "color": "#b7d6ec"
+      }
+    ],
+    "articleList": [
+      {
+        "id": 1,
+        "title": "手写/翰墨涟漪",
+        "desc": "不得不说孤独是一盏以忧伤为芯的灯将所有无言的哀恸点亮等着风雪再次埋葬 ——《后视君》 没有放飞天空的翅膀也要坦白最赤诚的胸膛让那振翅宇内的灵魂得...",
+        "imgUrl": "//upload.jianshu.io/collections/images/4/sy_20091020135145113016.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64",
+        "zhuanshi": 12.6,
+        "author": "就这样吧_af80",
+        "comment": 42,
+        "like": 123
+      },
+      {
+        "id": 2,
+        "title": "你就承认吧，当别人用简单的线条画出这么好看的手绘，你是羡慕的！",
+        "desc": "最近我发了很多的人物故事 很多人在看到别人几笔就能画一幅画的时候 内心是充满羡慕的 不要羡慕 跟上我的步伐 让你零基础开始 今天就先来一波从简到...",
+        "imgUrl": "//upload.jianshu.io/collections/images/283250/%E6%BC%AB%E7%94%BB%E4%B8%93%E9%A2%98.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64",
+        "zhuanshi": 60.6,
+        "author": "郑黛丽墨白",
+        "comment": 90,
+        "like": 318
+      },
+      {
+        "id": 3,
+        "title": "2019BATJ面试题汇总详解：MyBatis+MySQL+Spring+Redis+多线程",
+        "desc": "这里为大家分享一些面试的一手资料，供大家迎接接下来的金三银四跳槽季 Spring Spring 概述 什么是spring? 使用Spring框架...",
+        "imgUrl": "//upload.jianshu.io/collections/images/14/6249340_194140034135_2.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64",
+        "zhuanshi": 24.6,
+        "author": "慕容千语",
+        "comment": 11,
+        "like": 349
+      }
+    ]
+  }
+}

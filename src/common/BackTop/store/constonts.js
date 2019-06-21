@@ -1,0 +1,1 @@
+export const SCROLL_TO_TOP = "backTop/SCROLL_TO_TOP";

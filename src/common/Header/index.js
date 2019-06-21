@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 import { actionCreators } from './store';
@@ -18,7 +18,7 @@ import {
   Button
 } from './style';
 
-class Header extends Component {
+class Header extends PureComponent {
 
   getListArea() {
     const { focused, mouseIn, list, page, totalPage, handleMouseEnter, handleMouseLeave, handlePageChange } = this.props;
@@ -44,7 +44,10 @@ class Header extends Component {
         >
           <SearchInfoTitle>
             热门搜索
-            <SearchInfoSwitch onClick={() => handlePageChange(page, totalPage)}>换一批</SearchInfoSwitch>
+            <SearchInfoSwitch onClick={() => handlePageChange(page, totalPage, this.spinIcon)}>
+              <i ref={(icon) => {this.spinIcon = icon}} className="iconfont icon-shuaxin"></i>
+              换一批
+            </SearchInfoSwitch>
           </SearchInfoTitle>
           <div>
             {pageList}
@@ -66,7 +69,7 @@ class Header extends Component {
           <NavItem className="left">下载App</NavItem>
           <NavItem className="right">登录</NavItem>
           <NavItem className="right">
-            <i className="iconfont">&#xe636;</i>
+            <i className="iconfont icon-Aa"></i>
           </NavItem>
           <SearchWrapper>
             <CSSTransition
@@ -80,7 +83,7 @@ class Header extends Component {
                 onBlur={handleInputBlur}
               ></SearchInput>
             </CSSTransition>
-            <i className={this.props.focused ? 'iconfont focused' : 'iconfont'}>&#xe63d;</i>
+            <i className={this.props.focused ? 'iconfont icon-fangdajing zoom focused' : 'iconfont zoom icon-fangdajing'}></i>
             { this.getListArea() }
           </SearchWrapper>
           <Addtion>
@@ -121,8 +124,14 @@ const mapDispatchToProps = (dispatch) => {
     handleMouseLeave() {
       dispatch(actionCreators.mouseLeave());
     },
-    handlePageChange(page, totalPage) {
-      console.log(page ,totalPage);
+    handlePageChange(page, totalPage, spin) {
+      let originalAngle = spin.style.transform.replace(/[^0-9]/ig, "");
+      if(originalAngle) {
+        originalAngle = parseInt(originalAngle, 10) + 360;
+      } else {
+        originalAngle = 0;
+      }
+      spin.style.transform = `rotate(${originalAngle + 360}deg)`;
       if(page < totalPage) {
         dispatch(actionCreators.pageChange(page + 1));
       } else{

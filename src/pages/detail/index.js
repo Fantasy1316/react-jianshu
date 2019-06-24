@@ -1,5 +1,7 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import { actionCreators } from "./store";
 import BackTop from "../../common/BackTop";
 import {
   DetailWrapper,
@@ -7,13 +9,13 @@ import {
   Content
 } from "./style";
 
-class Detail extends Component {
+class Detail extends PureComponent {
   render() {
-    // const { title, content } = this.props;
+    const { title, content } = this.props;
     return (
       <DetailWrapper>
-        <Title>{this.props.title}</Title>
-        <Content dangerouslySetInnerHTML={{__html: this.props.content}} />
+        <Title>{title}</Title>
+        <Content dangerouslySetInnerHTML={{__html: content}} />
         <BackTop />
       </DetailWrapper>
     )
@@ -21,6 +23,7 @@ class Detail extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
+    this.props.getDetailData(this.props.match.params.id);
   }
 }
 
@@ -29,4 +32,10 @@ const mapState = (state) => ({
   content: state.getIn(["detail", "content"])
 })
 
-export default connect(mapState, null)(Detail);
+const mapDispatch = (dispatch) => ({
+  getDetailData(id) {
+    dispatch(actionCreators.getDetailContent(id))
+  }
+})
+
+export default connect(mapState, mapDispatch)(withRouter(Detail));

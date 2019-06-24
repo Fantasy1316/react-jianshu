@@ -14,12 +14,12 @@ export const Title = styled.p`
 `;
 
 export const Content = styled.div`
-  .detail-pic {
+  img {
     width: 640px;
     margin: 20px 0;
     border-radius: 6px;
   }
-  .detail-mian {
+  p {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.7;

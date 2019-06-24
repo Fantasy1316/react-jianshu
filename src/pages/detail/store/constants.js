@@ -1,0 +1,1 @@
+export const GET_DETAIL_COT = "detail/GET_DETAIL_C";

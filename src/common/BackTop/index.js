@@ -20,7 +20,15 @@ class BackTop extends PureComponent {
   }
 
   handleBackTop() {
-    window.scrollTo(0, 0);
+    let distance =  window.scrollY;
+    let step = distance / 10; //每步的距离
+    (function jump() {
+      if (distance > 0) {
+        distance -= step;
+        window.scrollTo(0, distance);
+        return setTimeout(jump, 16);
+      }
+    })();
   }
 
   bindEvents() {
